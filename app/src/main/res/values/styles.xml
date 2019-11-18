@@ -14,6 +14,8 @@
 
         <item name="bottomNavigationStyle">@style/widget.Pokedex.BottomNavigationView</item>
         <item name="tabStyle">@style/widget.Pokedex.TabLayout</item>
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
 
     </style>
     <style name="AppTheme" parent="BaseAppTheme"/>
