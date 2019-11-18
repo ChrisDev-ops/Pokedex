@@ -35,7 +35,7 @@
         <item name="textAppearanceOverline">@style/TextAppearance.Pokedex.Overline</item>
 
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Pokedex.SmallComponent</item>
-
+        <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
     </style>
     <!-- Typographie -->
     <style name="AppTheme" parent="BaseAppTheme"/>
@@ -130,4 +130,7 @@
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">12dp</item>
     </style>
-</resources>
+    <style name="Widget.Pokedex.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">8dp</item>
+    </style>
+    </resources>
