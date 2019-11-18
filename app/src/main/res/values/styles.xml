@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="BaseAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -17,12 +17,117 @@
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
 
+        <item name="textAppearanceHeadline1">@style/TextApparence.Pokedex.HeadLine1</item>
+
+
+        <item name="textAppearanceHeadline1" tools:ignore="DuplicateDefinition">@style/TextAppearance.Pokedex.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Pokedex.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Pokedex.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Pokedex.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Pokedex.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Pokedex.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Pokedex.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Pokedex.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Pokedex.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Pokedex.Body2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Pokedex.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Pokedex.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Pokedex.Overline</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Pokedex.SmallComponent</item>
+
     </style>
+    <!-- Typographie -->
     <style name="AppTheme" parent="BaseAppTheme"/>
+    <!-- Widget -->
     <style name="widget.Pokedex.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="android:background">?android:colorBackground</item>
     </style>
     <style name="widget.Pokedex.TabLayout" parent="Widget.MaterialComponents.TabLayout">
         <item name="android:background">?android:colorBackground</item>
+        <item name="tabTextAppearance">?textAppearanceHeadline6</item>
+    </style>
+
+    <style name="TextApparence.Pokedex.HeadLine1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+
+
+    <style name="TextAppearance.Pokedex.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.Pokedex.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/caudex_bold</item>
+        <item name="android:fontFamily">@font/caudex_bold</item>
+    </style>
+
+    <style name="widget.Pokedex.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:textAppearance">?textAppearanceBody1</item>
+    </style>
+    <style name="ShapeAppearance.Pokedex.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">12dp</item>
     </style>
 </resources>

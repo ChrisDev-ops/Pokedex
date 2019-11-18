@@ -30,7 +30,17 @@
             android:inputType="textPassword"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/ic_psyduck"
+            android:tint="?colorSecondary"
+            android:layout_height="wrap_content"/>
 
+</com.google.android.material.card.MaterialCardView>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,17 +48,11 @@
         android:background="?colorPrimary"
         android:padding="8dp"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:src="@drawable/ic_psyduck"
-        android:tint="?colorSecondary"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/theme"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme" android:fontFamily="@font/caudex_bold"/>
 
     <RadioGroup
         android:id="@+id/themeRadioGroup"
