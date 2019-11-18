@@ -1,13 +1,8 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="BaseAppTheme.Night" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="BaseAppTheme.Night" parent="BaseAppTheme">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryVariant">@color/redVariant</item>
-
-        <item name="colorSecondary">@color/orange</item>
-        <item name="colorSecondaryVariant">@color/orangeVariant</item>
 
         <item name="android:colorBackground">@color/lightDark</item>
         <item name="android:windowLightStatusBar">false</item>

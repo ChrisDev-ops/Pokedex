@@ -11,7 +11,16 @@
 
         <item name="android:statusBarColor">?android:colorBackground</item>
         <item name="android:windowLightStatusBar">true</item>
+
+        <item name="bottomNavigationStyle">@style/widget.Pokedex.BottomNavigationView</item>
+        <item name="tabStyle">@style/widget.Pokedex.TabLayout</item>
+
     </style>
     <style name="AppTheme" parent="BaseAppTheme"/>
-
+    <style name="widget.Pokedex.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">?android:colorBackground</item>
+    </style>
+    <style name="widget.Pokedex.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">?android:colorBackground</item>
+    </style>
 </resources>
