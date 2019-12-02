@@ -10,4 +10,21 @@
     <color name="lightDark">#212121</color>
     <color name="darkGrey">#1B1B1B</color>
 
+    <color name="fire">#FFFFFF</color>
+    <color name="poison">#7A7A7A</color>
+    <color name="ground">#0044AA</color>
+    <color name="water">#449DEF</color>
+    <color name="electric">#2F6699</color>
+    <color name="grass">#70C656</color>
+    <color name="ice">#53933F</color>
+    <color name="fighting">#F3AE1B</color>
+    <color name="flying">#BB6008</color>
+    <color name="psychic">#000000</color>
+    <color name="bug">#FFFFFF</color>
+    <color name="rock">#7A7A7A</color>
+    <color name="ghost">#0044AA</color>
+    <color name="dragon">#449DEF</color>
+    <color name="dark">#2F6699</color>
+    <color name="steel">#70C656</color>
+    <color name="fairy">#53933F</color>
 </resources>
