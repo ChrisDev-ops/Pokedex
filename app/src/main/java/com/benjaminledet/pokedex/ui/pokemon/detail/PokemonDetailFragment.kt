@@ -50,14 +50,22 @@ class PokemonDetailFragment: Fragment() {
 //setBackgroundColor(requireContext().getAttributeFromAttr(R.attr.colorPrimary
             when(typesPoke){
                 "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
-                "fire" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fire))
+                "water" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.water))
+                "electric" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.electric))
+                "grass" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.grass))
+                "ice" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.ice))
+                "fighting" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.fighting))
+                "poison" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.poison))
+                "ground" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.ground))
+                "flying" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.flying))
+                "psychic" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.psychic))
+                "bug" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.bug))
+                "rock" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.rock))
+                "ghost" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.ghost))
+                "dragon" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.dragon))
+                "bug" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.bug))
+                "bug" -> constrainL.setBackgroundColor(requireContext().getColor(R.color.bug))
+
 
 
             }

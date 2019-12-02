@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:background="?colorPrimary"
-        android:padding="8dp"/>
+        android:padding="10dp"/>
 
 
     <TextView

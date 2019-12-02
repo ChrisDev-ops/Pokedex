@@ -37,6 +37,8 @@
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Pokedex.SmallComponent</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
     </style>
+
+
     <!-- Typographie -->
     <style name="AppTheme" parent="BaseAppTheme"/>
     <!-- Widget -->
