@@ -5,7 +5,7 @@ import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = Pokemon.TABLE_NAME)
+@Entity(tableName = Move.TABLE_NAME)
 data class Move(
 
     @PrimaryKey
@@ -13,13 +13,7 @@ data class Move(
     val id: Int,
 
     @ColumnInfo(name = NAME)
-    val name: String,
-
-    @ColumnInfo(name = ICON_URL)
-    val iconUrl: String?,
-
-    @Embedded
-    val detail: PokemonDetail?
+    val name: String
 ) {
 
     override fun toString(): String = name
@@ -29,6 +23,6 @@ data class Move(
         const val TABLE_NAME = "Move"
         const val ID = "id"
         const val NAME = "name"
-        
+
     }
 }

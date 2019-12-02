@@ -23,7 +23,7 @@ abstract class PokedexDatabase: RoomDatabase() {
     abstract fun itemPocketDao(): ItemPocketDao
 
     abstract fun pokemonDao(): PokemonDao
-    
+
     abstract fun moveDao():MoveDao
 
     companion object {

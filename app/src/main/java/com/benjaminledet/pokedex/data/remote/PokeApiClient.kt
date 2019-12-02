@@ -91,7 +91,8 @@ class PokeApiClient: KoinComponent {
         detail = PokemonDetail(
             weight = pokemonResponse.weight / 10,
             height = pokemonResponse.height / 10,
-            types = pokemonResponse.types.mapNotNull { it.type.name }
+            types = pokemonResponse.types.mapNotNull { it.type.name },
+            moves = listOf()
         )
     )
 

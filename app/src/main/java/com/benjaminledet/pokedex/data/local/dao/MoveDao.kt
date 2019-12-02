@@ -31,4 +31,7 @@ abstract class MoveDao {
 
     @Query("SELECT * FROM ${Move.TABLE_NAME}")
     abstract fun getAllPaged(): DataSource.Factory<Int, Move>
+
+    @Query("SELECT * FROM ${Move.TABLE_NAME} WHERE ${Move.NAME} in (:names)")
+    abstract fun getAllObservable(names: List<String>): LiveData<List<Move>>
 }

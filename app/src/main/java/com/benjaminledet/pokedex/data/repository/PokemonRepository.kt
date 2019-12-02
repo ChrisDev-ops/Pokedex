@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.paging.toLiveData
+import com.benjaminledet.pokedex.data.local.dao.MoveDao
 import com.benjaminledet.pokedex.data.local.dao.PokemonDao
 import com.benjaminledet.pokedex.data.model.Pokemon
 import com.benjaminledet.pokedex.data.remote.PokeApiClient
@@ -29,7 +30,7 @@ class PokemonRepository: KoinComponent {
 
     fun getAllPokemonsObservable() = pokemonDao.getAllObservable()
 
-    fun getMovesObservable(list: List<String>) = moveDao.getAllObservable(names)
+    fun getMovesObservable(names: List<String>) = moveDao.getAllObservable(names)
 
     fun getAllPokemonsPagedList(scope: CoroutineScope, pageSize: Int): Listing<Pokemon> {
 
