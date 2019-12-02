@@ -1,6 +1,7 @@
 package com.benjaminledet.pokedex.ui.pokemon.detail
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +36,11 @@ class PokemonDetailFragment: Fragment() {
             weight.text = getString(R.string.pokemon_weight, pokemon?.detail?.weight.toString())
             height.text = getString(R.string.pokemon_height, pokemon?.detail?.height.toString())
 
+            val typesPoke: String = pokemon?.detail?.types?.get(0)
             Picasso.get().load(pokemon?.iconUrl).into(icon)
+        })
+        viewModel.moves.observe(this, Observer{moves ->
+            Log.d("PokemonDetailActivity", "moves :$moves")
         })
     }
 }

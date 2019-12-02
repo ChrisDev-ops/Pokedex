@@ -21,11 +21,15 @@ class PokemonRepository: KoinComponent {
 
     private val pokemonDao by inject<PokemonDao>()
 
+    private val moveDao by inject<MoveDao>()
+
     private val pokeApiClient by inject<PokeApiClient>()
 
     fun getPokemonObservable(id: Int) = pokemonDao.getByIdObservable(id)
 
     fun getAllPokemonsObservable() = pokemonDao.getAllObservable()
+
+    fun getMovesObservable(list: List<String>) = moveDao.getAllObservable(names)
 
     fun getAllPokemonsPagedList(scope: CoroutineScope, pageSize: Int): Listing<Pokemon> {
 
@@ -117,6 +121,8 @@ class PokemonRepository: KoinComponent {
         Log.v(TAG, "insert pokemons: $pokemons")
         pokemonDao.insert(pokemons)
     }
+
+
 
     companion object {
         private const val TAG = "PokemonRepository"
