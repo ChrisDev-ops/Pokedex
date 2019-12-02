@@ -1,6 +1,7 @@
 package com.benjaminledet.pokedex.ui.pokemon.detail
 
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -35,6 +36,9 @@ class PokemonDetailActivity: AppCompatActivity() {
 
 
             Picasso.get().load(pokemon?.iconUrl).into(icon)
+        })
+        viewModel.moves.observe(this, Observer { moves ->
+            Log.d("PokemonDetailActivity", "movies: $moves")
         })
     }
 

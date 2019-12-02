@@ -2,6 +2,7 @@ package com.benjaminledet.pokedex.data.remote
 
 import com.benjaminledet.pokedex.data.model.*
 import com.benjaminledet.pokedex.data.remote.response.*
+import kotlinx.android.synthetic.main.fragment_pokemon_detail.view.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
@@ -91,10 +92,21 @@ class PokeApiClient: KoinComponent {
         detail = PokemonDetail(
             weight = pokemonResponse.weight / 10,
             height = pokemonResponse.height / 10,
-            types = pokemonResponse.types.mapNotNull { it.type.name },
-            moves = listOf()
+            moves = pokemonResponse.moves.mapNotNull { it.move.name },
+            types = pokemonResponse.types.mapNotNull { it.type.name }
         )
     )
+    private fun moveResponseToMove(moveResponse: MoveResponse) = Move(
+        id = moveResponse.id,
+        name = moveResponse.name,
+        accuracy = moveResponse.accuracy,
+        pp = moveResponse.pp,
+        type = moveResponse.type.name ?: "",
+        power =  moveResponse.power
+
+
+        )
+
 
     private fun itemResponseToItem(itemResponse: ItemResponse, itemCategoryId: Int) = Item(
         id = itemResponse.id,
@@ -102,6 +114,19 @@ class PokeApiClient: KoinComponent {
         iconUrl = itemResponse.sprites[ItemResponse.DEFAULT_SPRITE],
         itemCategoryId = itemCategoryId
     )
+     suspend fun getMoves(list: List<String>): List<Move> {
+         return coroutineScope{
+             list.parallelMap(this){name ->
+                 val response = performRequest{
+                     service.getMoveAsync(name)
+                 }
+                 moveResponseToMove(response)
+             }
+         }.toList()
+
+
+
+    }
 
     private fun itemCategoryResponseToItemCategory(itemCategoryResponse: ItemCategoryResponse, itemPocketId: Int) = ItemCategory(
         id = itemCategoryResponse.id,
@@ -157,6 +182,7 @@ class PokeApiClient: KoinComponent {
     private fun getPokemonBeautifulIconUrl(id: Int?) = "$POKEMON_BEAUTIFUL_ICON_BASE_URL${String.format("%03d", id)}$ICON_EXTENSION"
 
     private fun getItemIconUrl(name: String?) = "$ITEM_ICON_BASE_URL$name$ICON_EXTENSION"
+
 
     companion object {
         private const val TAG = "PokeApiClient"

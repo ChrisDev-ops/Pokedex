@@ -7,6 +7,7 @@ import androidx.lifecycle.Transformations
 import androidx.paging.toLiveData
 import com.benjaminledet.pokedex.data.local.dao.MoveDao
 import com.benjaminledet.pokedex.data.local.dao.PokemonDao
+import com.benjaminledet.pokedex.data.model.Move
 import com.benjaminledet.pokedex.data.model.Pokemon
 import com.benjaminledet.pokedex.data.remote.PokeApiClient
 import com.benjaminledet.pokedex.data.repository.utils.BoundaryCallback
@@ -79,6 +80,13 @@ class PokemonRepository: KoinComponent {
             try {
                 val pokemon = pokeApiClient.getPokemonDetail(id)
                 insertPokemons(listOf(pokemon))
+                pokemon.detail?.moves?.let{list ->
+                    if (list.isNotEmpty()){
+                        val moves = pokeApiClient.getMoves(pokemon.detail?.moves)
+                        insertMoves(moves)
+                    }
+                }
+
                 networkState.postValue(NetworkState.LOADED)
                 Log.v(TAG, "refresh pokemon: ${Status.SUCCESS}")
 
@@ -121,6 +129,10 @@ class PokemonRepository: KoinComponent {
     private suspend fun insertPokemons(pokemons: List<Pokemon>) {
         Log.v(TAG, "insert pokemons: $pokemons")
         pokemonDao.insert(pokemons)
+    }
+    private suspend fun insertMoves(moves: List<Move>) {
+        Log.v(TAG, "insert pokemons: $moves")
+        moveDao.insert(moves)
     }
 
 
